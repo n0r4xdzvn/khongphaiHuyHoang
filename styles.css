@@ -94,8 +94,8 @@ a {
   height: 100%;
   background-color: var(--black);
   display: flex;
-  align-items: center; /* Ensure vertical alignment */
-  justify-content: center; /* Ensure horizontal alignment */
+  align-items: center; /* Đảm bảo căn chỉnh theo chiều dọc */
+  justify-content: center; /* Đảm bảo căn chỉnh theo chiều ngang */
   z-index: 9999;
   transition: opacity 0.5s ease;
 }
@@ -110,17 +110,9 @@ a {
   margin-bottom: 2rem;
 }
 
+/* Xóa phần .loading-spinner-inner (vòng tròn nhỏ) */
 .loading-spinner-inner {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  top: 50%; /* Fix alignment */
-  left: 50%; /* Fix alignment */
-  transform: translate(-50%, -50%); /* Center the element */
-  border-radius: 50%;
-  border: 4px solid;
-  border-color: transparent var(--white) transparent var(--light);
-  animation: spin-reverse 1.5s linear infinite;
+  display: none; /* Ẩn vòng tròn nhỏ */
 }
 
 .loading-text {
@@ -154,6 +146,7 @@ a {
 .dot:nth-child(3) {
   animation: scale-dot 1s infinite 0.4s;
 }
+
 
 
 /* Header */
